@@ -27,3 +27,5 @@ Initially, run `sudo dseditgroup -o edit -a $(id -un) -t user _clamav`
 ### Running the app
 
 `docker-sync-stack start`
+
+*Initially, this will fail as there you probably don't have the correct docker-volume create. There are, however, instructions for generating the volume.*
