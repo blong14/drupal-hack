@@ -8,11 +8,9 @@ services:
       MYSQL_DATABASE: drupal
       MYSQL_USER: drupal
       MYSQL_PASSWORD: drupal
-    expose:
-     - "3306"
-#    volumes:
-#      - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
-#      - /path/to/mariadb/data/on/host:/var/lib/mysql # I want to manage volumes manually.
+    volumes:
+      # - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
+      - ./mariadb-init:/var/lib/mysql # I want to manage volumes manually.
 
   php:
 # 1. Images with vanilla Drupal – wodby/drupal:[DRUPAL_VERSION]-[PHP_VERSION]-[STABILITY_TAG].
