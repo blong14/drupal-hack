@@ -38,3 +38,4 @@ xmlrpc.php
 
 .DS_Store
 .docker-sync/
+mariadb-init
